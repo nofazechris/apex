@@ -26,8 +26,9 @@ export default function AppShell({ vm }) {
     showUpdates,
   } = vm;
   return (
-    <div style={{ minHeight: '100vh', display: 'grid', gridTemplateColumns: '248px 1fr', background: '#f4f7fb' }}>
+    <div className="r-shell" style={{ minHeight: '100vh', display: 'grid', gridTemplateColumns: '248px 1fr', background: '#f4f7fb' }}>
       <aside
+        className="r-sidebar"
         style={{
           background: '#021024',
           color: '#fff',
@@ -39,7 +40,7 @@ export default function AppShell({ vm }) {
           height: '100vh',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '6px 10px 24px' }}>
+        <div className="r-side-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '6px 10px 24px' }}>
           <span
             style={{
               display: 'inline-flex',
@@ -67,7 +68,7 @@ export default function AppShell({ vm }) {
           </span>
           <span style={{ fontSize: '20px', fontWeight: '800' }}>apex</span>
         </div>
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+        <nav className="r-sidenav" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
           {navItems.map((n, _i) => (
             <button key={_i} onClick={n.onClick} style={css(n.navStyle)}>
               <Icon name={n.icon} />
@@ -75,7 +76,10 @@ export default function AppShell({ vm }) {
             </button>
           ))}
         </nav>
-        <div style={{ marginTop: 'auto', background: 'rgba(255,255,255,.06)', borderRadius: '14px', padding: '16px' }}>
+        <div
+          className="r-side-promo"
+          style={{ marginTop: 'auto', background: 'rgba(255,255,255,.06)', borderRadius: '14px', padding: '16px' }}
+        >
           <div style={{ fontSize: '13px', fontWeight: '700', marginBottom: '4px' }}>{examLabel}</div>
           <div style={{ fontSize: '12.5px', color: '#9fb4d0', lineHeight: '1.5' }}>Keep practising — your next mock is one click away.</div>
           <button
@@ -97,6 +101,7 @@ export default function AppShell({ vm }) {
       </aside>
       <div>
         <header
+          className="r-px r-topbar"
           style={{
             background: '#fff',
             borderBottom: '1px solid #e3ebf4',
@@ -109,7 +114,7 @@ export default function AppShell({ vm }) {
             zIndex: '20',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          <div className="r-topbar-title" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <h1 style={{ fontSize: '19px', fontWeight: '800' }}>{pageTitle}</h1>
             <span
               style={{
@@ -143,7 +148,7 @@ export default function AppShell({ vm }) {
               <Icon name="bell" />
             </button>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div style={{ textAlign: 'right' }}>
+              <div className="r-hide-sm" style={{ textAlign: 'right' }}>
                 <div style={{ fontSize: '13.5px', fontWeight: '700' }}>{profile.name}</div>
                 <div style={{ fontSize: '11.5px', color: '#5b6b82' }}>{profile.email}</div>
               </div>
@@ -166,7 +171,7 @@ export default function AppShell({ vm }) {
             </div>
           </div>
         </header>
-        <main style={{ padding: '32px 36px 60px', maxWidth: '1180px' }}>
+        <main className="r-px r-main" style={{ padding: '32px 36px 60px', maxWidth: '1180px' }}>
           {showDashboard ? <DashboardScreen vm={vm} /> : null}
           {showPractice ? <PracticeScreen vm={vm} /> : null}
           {showMocks ? <MockExamsScreen vm={vm} /> : null}

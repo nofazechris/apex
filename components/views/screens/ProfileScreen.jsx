@@ -43,7 +43,7 @@ export default function ProfileScreen({ vm }) {
       </div>
       <div style={{ background: '#fff', border: '1px solid #e3ebf4', borderRadius: '18px', padding: '26px', marginBottom: '20px' }}>
         <div style={{ fontWeight: '800', fontSize: '16px', marginBottom: '18px' }}>Edit profile</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+        <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
           <div>
             <label style={{ display: 'block', fontSize: '13px', fontWeight: '600', marginBottom: '7px' }}>Full name</label>
             <input

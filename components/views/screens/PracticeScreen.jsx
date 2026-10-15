@@ -33,7 +33,7 @@ export default function PracticeScreen({ vm }) {
               ))}
             </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '16px' }}>
+          <div className="r-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '16px' }}>
             {practiceModes.map((m, _i) => (
               <div
                 key={_i}

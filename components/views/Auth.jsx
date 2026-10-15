@@ -23,8 +23,9 @@ export default function Auth({ vm }) {
     togglePw,
   } = vm;
   return (
-    <div style={{ minHeight: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+    <div className="r-auth" style={{ minHeight: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
       <div
+        className="r-px r-auth-brand"
         style={{
           background: 'linear-gradient(160deg,#021024,#052659)',
           color: '#fff',
@@ -64,6 +65,7 @@ export default function Auth({ vm }) {
         </div>
         <div>
           <h2
+            className="r-h"
             style={{
               fontSize: '34px',
               fontWeight: '800',
@@ -81,7 +83,7 @@ export default function Auth({ vm }) {
         </div>
         <p style={{ fontSize: '12.5px', color: '#73879f' }}>Demo prototype · not production authentication.</p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}>
+      <div className="r-px" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}>
         <div style={{ width: '100%', maxWidth: '380px' }} className="apx-fade">
           <button
             onClick={backToLanding}

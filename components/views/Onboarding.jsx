@@ -44,6 +44,7 @@ export default function Onboarding({ vm }) {
   return (
     <div style={{ minHeight: '100vh', background: '#f4f7fb', display: 'flex', flexDirection: 'column' }}>
       <div
+        className="r-px"
         style={{
           padding: '20px 40px',
           background: '#fff',
@@ -94,11 +95,13 @@ export default function Onboarding({ vm }) {
         <div style={{ width: '100%', maxWidth: '720px' }} className="apx-fade">
           {obStep1 ? (
             <div>
-              <h1 style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-.02em', textAlign: 'center' }}>Choose your examination</h1>
+              <h1 className="r-h" style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-.02em', textAlign: 'center' }}>
+                Choose your examination
+              </h1>
               <p style={{ textAlign: 'center', color: '#5b6b82', fontSize: '16px', margin: '10px 0 36px' }}>
                 We’ll tailor subjects, practice and mocks to your path.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+              <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                 <button onClick={obChooseJamb} style={css(obJambCardStyle)}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                     <span
@@ -158,10 +161,12 @@ export default function Onboarding({ vm }) {
           ) : null}
           {obStep2 ? (
             <div>
-              <h1 style={{ fontSize: '30px', fontWeight: '800', letterSpacing: '-.02em' }}>Set up your profile</h1>
+              <h1 className="r-h" style={{ fontSize: '30px', fontWeight: '800', letterSpacing: '-.02em' }}>
+                Set up your profile
+              </h1>
               <p style={{ color: '#5b6b82', fontSize: '15.5px', margin: '8px 0 28px' }}>{obStepHint}</p>
               <div style={{ background: '#fff', border: '1px solid #e3ebf4', borderRadius: '18px', padding: '26px', marginBottom: '20px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '13px', fontWeight: '600', marginBottom: '7px' }}>Full name</label>
                     <input
@@ -222,7 +227,7 @@ export default function Onboarding({ vm }) {
                     </div>
                   </div>
                 ) : null}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
+                <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
                   {obIsJamb ? (
                     <div>
                       <label style={{ display: 'block', fontSize: '13px', fontWeight: '600', marginBottom: '7px' }}>
@@ -299,7 +304,9 @@ export default function Onboarding({ vm }) {
           ) : null}
           {obStep3 ? (
             <div>
-              <h1 style={{ fontSize: '30px', fontWeight: '800', letterSpacing: '-.02em' }}>Confirm your profile</h1>
+              <h1 className="r-h" style={{ fontSize: '30px', fontWeight: '800', letterSpacing: '-.02em' }}>
+                Confirm your profile
+              </h1>
               <p style={{ color: '#5b6b82', fontSize: '15.5px', margin: '8px 0 28px' }}>
                 Check everything looks right — you can go back to change anything.
               </p>

@@ -5,7 +5,7 @@ export default function ProgressScreen({ vm }) {
   const { hasSubjectPerf, noSubjectPerf, progress } = vm;
   return (
     <div className="apx-fade">
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '16px', marginBottom: '22px' }}>
+      <div className="r-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '16px', marginBottom: '22px' }}>
         {progress.stats.map((s, _i) => (
           <div key={_i} style={{ background: '#fff', border: '1px solid #e3ebf4', borderRadius: '16px', padding: '20px' }}>
             <span
@@ -28,7 +28,7 @@ export default function ProgressScreen({ vm }) {
           </div>
         ))}
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', marginBottom: '20px' }}>
+      <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '20px', marginBottom: '20px' }}>
         <div style={{ background: '#fff', border: '1px solid #e3ebf4', borderRadius: '18px', padding: '24px' }}>
           <div style={{ fontWeight: '800', fontSize: '17px', marginBottom: '18px' }}>Score trend</div>
           {progress.hasTrend ? (

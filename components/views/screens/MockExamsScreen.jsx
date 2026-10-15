@@ -11,6 +11,7 @@ export default function MockExamsScreen({ vm }) {
         {mockList.map((m, _i) => (
           <div
             key={_i}
+            className="r-cardrow"
             style={{
               background: '#fff',
               border: '1px solid #e3ebf4',
@@ -53,7 +54,7 @@ export default function MockExamsScreen({ vm }) {
                 </span>
               </div>
               <p style={{ color: '#5b6b82', fontSize: '14px', lineHeight: '1.5', marginBottom: '10px' }}>{m.about}</p>
-              <div style={{ display: 'flex', gap: '18px', fontSize: '13px', color: '#5b6b82' }}>
+              <div className="r-wrap" style={{ display: 'flex', gap: '8px 18px', fontSize: '13px', color: '#5b6b82' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                   <Icon name="list-checks" />
                   {m.qcount}

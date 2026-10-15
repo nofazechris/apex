@@ -6,6 +6,7 @@ export default function ExamRoom({ vm }) {
   return (
     <div style={{ minHeight: '100vh', background: '#eef2f7', display: 'flex', flexDirection: 'column' }}>
       <div
+        className="r-exam-top"
         style={{
           background: '#021024',
           color: '#fff',
@@ -45,8 +46,11 @@ export default function ExamRoom({ vm }) {
           </button>
         </div>
       </div>
-      <div style={{ flex: '1', display: 'grid', gridTemplateColumns: '1fr 288px', maxWidth: '1240px', margin: '0 auto', width: '100%' }}>
-        <div style={{ padding: '34px 40px' }}>
+      <div
+        className="r-exam"
+        style={{ flex: '1', display: 'grid', gridTemplateColumns: '1fr 288px', maxWidth: '1240px', margin: '0 auto', width: '100%' }}
+      >
+        <div className="r-px" style={{ padding: '34px 40px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
             <div style={{ fontSize: '12.5px', fontWeight: '700', color: '#5483B3', letterSpacing: '.04em' }}>
               {qv.subject}
@@ -136,8 +140,9 @@ export default function ExamRoom({ vm }) {
             </button>
           </div>
         </div>
-        <div style={{ padding: '34px 28px 34px 0' }}>
+        <div className="r-exam-side" style={{ padding: '34px 28px 34px 0' }}>
           <div
+            className="r-static"
             style={{
               background: '#fff',
               border: '1px solid #e3ebf4',

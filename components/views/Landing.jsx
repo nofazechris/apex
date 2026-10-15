@@ -5,6 +5,7 @@ export default function Landing({ vm }) {
   return (
     <div>
       <nav
+        className="r-px"
         style={{
           position: 'sticky',
           top: '0',
@@ -46,17 +47,20 @@ export default function Landing({ vm }) {
           </span>
           <span style={{ fontSize: '21px', fontWeight: '800', letterSpacing: '-.02em' }}>apex</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '28px', fontSize: '14.5px', fontWeight: '500', color: '#33465e' }}>
-          <a href="#how" style={{ color: '#33465e' }}>
+        <div
+          className="r-navlinks"
+          style={{ display: 'flex', alignItems: 'center', gap: '28px', fontSize: '14.5px', fontWeight: '500', color: '#33465e' }}
+        >
+          <a className="r-hide-sm" href="#how" style={{ color: '#33465e' }}>
             How it works
           </a>
-          <a href="#features" style={{ color: '#33465e' }}>
+          <a className="r-hide-sm" href="#features" style={{ color: '#33465e' }}>
             Features
           </a>
-          <a href="#paths" style={{ color: '#33465e' }}>
+          <a className="r-hide-sm" href="#paths" style={{ color: '#33465e' }}>
             JAMB
           </a>
-          <a href="#paths" style={{ color: '#33465e' }}>
+          <a className="r-hide-sm" href="#paths" style={{ color: '#33465e' }}>
             WAEC
           </a>
           <button onClick={onSignIn} style={{ color: '#052659', fontWeight: '600', fontSize: '14.5px' }}>
@@ -78,6 +82,7 @@ export default function Landing({ vm }) {
         </div>
       </nav>
       <section
+        className="r-px r-py"
         style={{
           position: 'relative',
           overflow: 'hidden',
@@ -99,6 +104,7 @@ export default function Landing({ vm }) {
           }}
         />
         <div
+          className="r-hero"
           style={{
             position: 'relative',
             maxWidth: '1180px',
@@ -126,6 +132,7 @@ export default function Landing({ vm }) {
               EXAM PREPARATION, REIMAGINED
             </span>
             <h1
+              className="r-h"
               style={{
                 fontSize: '58px',
                 lineHeight: '1.02',
@@ -277,14 +284,14 @@ export default function Landing({ vm }) {
           </div>
         </div>
       </section>
-      <section id="paths" style={{ maxWidth: '1180px', margin: '0 auto', padding: '84px 40px' }}>
-        <h2 style={{ fontSize: '38px', fontWeight: '800', letterSpacing: '-.02em', textAlign: 'center' }}>
+      <section id="paths" className="r-px r-py" style={{ maxWidth: '1180px', margin: '0 auto', padding: '84px 40px' }}>
+        <h2 className="r-h" style={{ fontSize: '38px', fontWeight: '800', letterSpacing: '-.02em', textAlign: 'center' }}>
           One goal. Two paths to get there.
         </h2>
         <p style={{ textAlign: 'center', color: '#5b6b82', fontSize: '17px', margin: '12px auto 44px', maxWidth: '560px' }}>
           Choose your examination and Apex shapes a preparation plan around your subjects and target.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '26px' }}>
+        <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '26px' }}>
           <div
             style={{
               border: '1px solid #e3ebf4',
@@ -527,9 +534,11 @@ export default function Landing({ vm }) {
         </div>
       </section>
       <section id="how" style={{ background: '#fff', borderTop: '1px solid #e3ebf4', borderBottom: '1px solid #e3ebf4' }}>
-        <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '72px 40px' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-.02em', marginBottom: '38px' }}>How Apex works</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '22px' }}>
+        <div className="r-px r-py" style={{ maxWidth: '1180px', margin: '0 auto', padding: '72px 40px' }}>
+          <h2 className="r-h" style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-.02em', marginBottom: '38px' }}>
+            How Apex works
+          </h2>
+          <div className="r-4col" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '22px' }}>
             <div>
               <span
                 style={{
@@ -621,8 +630,11 @@ export default function Landing({ vm }) {
           </div>
         </div>
       </section>
-      <section id="features" style={{ maxWidth: '1180px', margin: '0 auto', padding: '80px 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center', marginBottom: '60px' }}>
+      <section id="features" className="r-px r-py" style={{ maxWidth: '1180px', margin: '0 auto', padding: '80px 40px' }}>
+        <div
+          className="r-2col"
+          style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center', marginBottom: '60px' }}
+        >
           <div>
             <span style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '.14em', color: '#5483B3' }}>PERSONALISED PRACTICE</span>
             <h3 style={{ fontSize: '30px', fontWeight: '800', letterSpacing: '-.02em', margin: '10px 0 12px' }}>
@@ -653,7 +665,10 @@ export default function Landing({ vm }) {
             </div>
           </div>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center', marginBottom: '60px' }}>
+        <div
+          className="r-2col"
+          style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center', marginBottom: '60px' }}
+        >
           <div style={{ order: '2' }}>
             <span style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '.14em', color: '#5483B3' }}>REALISTIC MOCK EXAMS</span>
             <h3 style={{ fontSize: '30px', fontWeight: '800', letterSpacing: '-.02em', margin: '10px 0 12px' }}>
@@ -815,7 +830,7 @@ export default function Landing({ vm }) {
             </div>
           </div>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+        <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
           <div>
             <span style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '.14em', color: '#5483B3' }}>PERFORMANCE ANALYTICS</span>
             <h3 style={{ fontSize: '30px', fontWeight: '800', letterSpacing: '-.02em', margin: '10px 0 12px' }}>
@@ -863,7 +878,7 @@ export default function Landing({ vm }) {
           </div>
         </div>
       </section>
-      <section style={{ maxWidth: '1180px', margin: '0 auto 80px', padding: '0 40px' }}>
+      <section className="r-px" style={{ maxWidth: '1180px', margin: '0 auto 80px', padding: '0 40px' }}>
         <div
           style={{
             background: 'linear-gradient(135deg,#021024,#052659)',
@@ -887,6 +902,7 @@ export default function Landing({ vm }) {
             }}
           />
           <h2
+            className="r-h"
             style={{
               position: 'relative',
               fontSize: '40px',
@@ -918,8 +934,11 @@ export default function Landing({ vm }) {
           </button>
         </div>
       </section>
-      <footer style={{ background: '#021024', color: '#9fb4d0', padding: '54px 40px 34px' }}>
-        <div style={{ maxWidth: '1180px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1fr', gap: '36px' }}>
+      <footer className="r-px" style={{ background: '#021024', color: '#9fb4d0', padding: '54px 40px 34px' }}>
+        <div
+          className="r-footer"
+          style={{ maxWidth: '1180px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1fr', gap: '36px' }}
+        >
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '9px', marginBottom: '12px' }}>
               <span

@@ -8,6 +8,7 @@ export default function ResultsScreen({ vm }) {
       {hasResults ? (
         <div className="apx-fade" style={{ maxWidth: '860px' }}>
           <div
+            className="r-resulthero"
             style={{
               background: 'linear-gradient(135deg,#052659,#0a3d78)',
               color: '#fff',
@@ -73,7 +74,7 @@ export default function ResultsScreen({ vm }) {
               </div>
             </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '24px' }}>
+          <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '24px' }}>
             <div style={{ background: '#fff', border: '1px solid #e3ebf4', borderRadius: '18px', padding: '24px' }}>
               <div style={{ fontWeight: '800', fontSize: '16px', marginBottom: '16px' }}>Subject breakdown</div>
               {results.hasSubjects ? (

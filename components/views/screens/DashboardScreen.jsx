@@ -26,7 +26,7 @@ export default function DashboardScreen({ vm }) {
         </h2>
         <p style={{ color: '#5b6b82', fontSize: '16px', marginTop: '4px' }}>Let’s make today’s preparation count.</p>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '20px', marginBottom: '20px' }}>
+      <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '20px', marginBottom: '20px' }}>
         <div
           style={{
             background: 'linear-gradient(135deg,#052659,#0a3d78)',
@@ -157,7 +157,7 @@ export default function DashboardScreen({ vm }) {
           </button>
         </div>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '20px' }}>
+      <div className="r-2col" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '20px' }}>
         <div style={{ background: '#fff', border: '1px solid #e3ebf4', borderRadius: '20px', padding: '24px' }}>
           <div style={{ fontWeight: '800', fontSize: '17px', marginBottom: '18px' }}>Subject performance</div>
           {hasSubjectPerf ? (
@@ -275,7 +275,7 @@ export default function DashboardScreen({ vm }) {
             <Icon name="arrow-right" />
           </button>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '14px' }}>
+        <div className="r-3col" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '14px' }}>
           {dashUpdates.map((u, _i) => (
             <a
               key={_i}
