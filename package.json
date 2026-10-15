@@ -1,0 +1,20 @@
+{
+  "name": "apex",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 8765",
+    "build": "next build",
+    "start": "next start -p 8765"
+  },
+  "dependencies": {
+    "lucide-react": "^1.57.0",
+    "next": "^16.4.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "htmlparser2": "^12.0.0",
+    "prettier": "^3.9.10"
+  }
+}
